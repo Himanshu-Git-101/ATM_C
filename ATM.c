@@ -18,8 +18,8 @@ int main(){
         {
             printf("Insufficient Balance");
         }
-        else if (w<0){
-            printf("Inavlid Input")
+        else if (w<=0){
+            printf("Inavlid Input");
         }
         else{
         printf("Please Take your cash!!\nDo you want to see your balance?\n1.Yes\n2.No\nYour Input: ");

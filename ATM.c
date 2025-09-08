@@ -14,7 +14,7 @@ int main(){
     {
         printf("How much money Do you want to withdraw?: ");
         scanf("%d", &w);
-        if (w>Balance && w <0)
+        if (w>Balance || w <0)
         {
             printf("Insufficient Balance");
         }

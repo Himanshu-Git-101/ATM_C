@@ -2,10 +2,10 @@
 #include <math.h>
 
 int main(){
-    int a,p,q,r; int Balance = 50000; int w,d,c; int PIN=1367;
+    int a,p,q,r,b=2; int Balance = 50000; int w,d,c; int PIN=1367;
      printf("Enter Your Pin\nYour Input: ");
     scanf("%d", &r);
-    
+    while (b>=0){
     if (r == PIN)
     {
     printf("Welcome to ATM!!\nWhat do you wanna proceed with?\n1.Withdrawal\n2.Deposit\n3.Check Balance\n4.Exit\nYour Input: ");
@@ -70,8 +70,14 @@ int main(){
 
 }
     else {
-        printf("Invalid Pin");
+        printf("Invalid Pin\n");
+        printf("You have only %d attempts left.\n",b);
     }
+    b--;
+    if (b<0){
+        printf("You have entered Wrong PIN for 3 times, Your account has been suspended temporarily");
+    }
+}
     
  
     
